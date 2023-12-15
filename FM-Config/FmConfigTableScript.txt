@@ -1,0 +1,31 @@
+CREATE TABLE [dbo].[REN_FM_Mobile_Configuration](
+	[ConfigID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](100) NULL,
+	[Value] [nvarchar](max) NOT NULL,
+	[Description] [nvarchar](500) NULL,
+	[CreatedBy] [nvarchar](50) NOT NULL,
+	[CreatedDate] [float] NOT NULL,
+	[ModifiedBy] [nvarchar](50) NULL,
+	[ModifiedDate] [float] NULL,
+	[ConfigValueType] [nvarchar](200) NULL,
+)
+
+INSERT INTO REN_FM_Mobile_Configuration ([Name],[Value],[Description],[CreatedBy],[CreatedDate],[ModifiedBy],[ModifiedDate],[ConfigValueType])
+VALUES ('FacilityDocuments','40201,40203','FM Documents','admin',CONVERT(FLOAT,GETDATE()),'Admin',CONVERT(FLOAT,GETDATE()),'string')
+
+INSERT INTO REN_FM_Mobile_Configuration ([Name],[Value],[Description],[CreatedBy],[CreatedDate],[ModifiedBy],[ModifiedDate],[ConfigValueType])
+VALUES ('FmTenantDocumentConfiguration','{"PreferredMinMaxDates":"0,14","PreferredDisabledDays":"0,6","PreferredEnabledTime":"8.1,17.1","PreferredTimeFormat":"24","dcCCNID159":false,"dcCCNID155":false,"dcCCNID156":false,"dcCCNID157":false,"dcAlpha3":true,"dcAlpha4":true,"dcAlpha5":true,"dcAlpha8":true}','FM Tenant Form Configuration','admin',CONVERT(FLOAT,GETDATE()),'Admin',CONVERT(FLOAT,GETDATE()),'string')
+
+INSERT INTO REN_FM_Mobile_Configuration ([Name],[Value],[Description],[CreatedBy],[CreatedDate],[ModifiedBy],[ModifiedDate],[ConfigValueType])
+VALUES ('FmSupervisorDocumentConfiguration','{"FormVisibility":true,"CustomTechnician":false,"dcCCNID159":true,"dcCCNID155":true,"dcCCNID156":true,"dcCCNID157":true,"dcAlpha9":true}','FM Supervisor Form Configuration','admin',CONVERT(FLOAT,GETDATE()),'Admin',CONVERT(FLOAT,GETDATE()),'string')
+
+INSERT INTO REN_FM_Mobile_Configuration ([Name],[Value],[Description],[CreatedBy],[CreatedDate],[ModifiedBy],[ModifiedDate],[ConfigValueType])
+VALUES ('FmSupervisorSP','spREN_GetAssignedSupervisorID','FM SP for getting SupervisorID','admin',CONVERT(FLOAT,GETDATE()),'Admin',CONVERT(FLOAT,GETDATE()),'string')
+
+INSERT INTO REN_FM_Mobile_Configuration ([Name],[Value],[Description],[CreatedBy],[CreatedDate],[ModifiedBy],[ModifiedDate],[ConfigValueType])
+VALUES ('FmTechniciansSP','spREN_GetAssignedTechnicians','FM SP for getting Technicians for Supervisor','admin',CONVERT(FLOAT,GETDATE()),'Admin',CONVERT(FLOAT,GETDATE()),'string')
+
+
+
+
+
